@@ -24,7 +24,8 @@ class _ContactsState extends State<Contacts> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
+
           "Contacts Screen",
           style: TextStyle(
             fontSize: 25,
@@ -33,7 +34,7 @@ class _ContactsState extends State<Contacts> {
         centerTitle: true,
       ),
       body: Container(
-        margin: EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
+        margin: const EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
         child: Column(
           children: [
             TextField(
@@ -42,50 +43,50 @@ class _ContactsState extends State<Contacts> {
               decoration: InputDecoration(
                   fillColor: Colors.white,
                   filled: true,
-                  label: Text("Name",
+                  label: const Text("Name",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
                       )),
                   hintText: "Enter Your Name Here",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
                   ),
-                  suffix: Icon(Icons.edit, color: Colors.blue),
+                  suffix: const Icon(Icons.edit, color: Colors.blue),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
-                      borderSide: BorderSide(color: Colors.transparent)),
+                      borderSide: const BorderSide(color: Colors.transparent)),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50))),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               controller: number,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   fillColor: Colors.white,
                   filled: true,
-                  label: Text("Phone",
+                  label: const Text("Phone",
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontSize: 25,
                       )),
                   hintText: "Enter Your Number Here",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontWeight: FontWeight.w400,
                     color: Colors.black,
                   ),
-                  suffix: Icon(Icons.call, color: Colors.blue),
+                  suffix: const Icon(Icons.call, color: Colors.blue),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
-                      borderSide: BorderSide(color: Colors.transparent)),
+                      borderSide: const BorderSide(color: Colors.transparent)),
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50))),
             ),
-            SizedBox(height: 35),
+            const SizedBox(height: 35),
             Row(
               children: [
                 Expanded(
@@ -104,7 +105,7 @@ class _ContactsState extends State<Contacts> {
                       name.clear();
                       number.clear();
                     },
-                    child: Text(
+                    child: const Text(
                       "Add",
                       style: TextStyle(
                           fontSize: 25,
@@ -112,13 +113,13 @@ class _ContactsState extends State<Contacts> {
                           color: Colors.black),
                     ),
                     style: ButtonStyle(
-                      padding: MaterialStatePropertyAll(EdgeInsets.all(12)),
+                      padding: const MaterialStatePropertyAll(EdgeInsets.all(12)),
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
                     ),
                   ),
                 ),
-                SizedBox(width: 5),
+                const SizedBox(width: 5),
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
@@ -129,7 +130,7 @@ class _ContactsState extends State<Contacts> {
                       name.clear();
                       number.clear();
                     },
-                    child: Text(
+                    child: const Text(
                       "Delete",
                       style: TextStyle(
                           fontSize: 25,
@@ -137,10 +138,10 @@ class _ContactsState extends State<Contacts> {
                           color: Colors.black),
                     ),
                     style: ButtonStyle(
-                      padding: MaterialStatePropertyAll(EdgeInsets.all(12)),
+                      padding: const MaterialStatePropertyAll(EdgeInsets.all(12)),
                       shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
-                      backgroundColor: MaterialStatePropertyAll(Colors.red),
+                      backgroundColor: const MaterialStatePropertyAll(Colors.red),
                     ),
                   ),
                 ),
